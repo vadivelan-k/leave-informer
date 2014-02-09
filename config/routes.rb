@@ -2,7 +2,7 @@ CustomerEvaluation::Application.routes.draw do
   resources :user_sessions
 
   match 'play_text' => "home#play_text", :as => :play_text
-  
+  match 'record_conversation' => "home#record_conversation", :as => :record_conversation
   
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
