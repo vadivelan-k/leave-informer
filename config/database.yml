@@ -19,7 +19,8 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/leave-informer.sqlite3
-  pool: 5
-  timeout: 5000
+  host: ec2-54-204-44-31.compute-1.amazonaws.com
+  database:	dbuliio4k2brct
+  username:	htrhzdrykbroeo
+  port:	5432
+  password: HYhYzXN34IPJMOVuDGB9VqPlZy
