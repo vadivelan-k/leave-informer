@@ -1,6 +1,9 @@
 CustomerEvaluation::Application.routes.draw do
   resources :user_sessions
 
+  match 'play_text' => "home#play_text", :as => :play_text
+  
+  
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
 
