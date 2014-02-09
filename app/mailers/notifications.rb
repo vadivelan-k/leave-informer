@@ -1,5 +1,5 @@
 class Notifications < ActionMailer::Base
-  default from: "leaveadmin@cognizant.com"
+  default from: "sample@sample.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -9,7 +9,7 @@ class Notifications < ActionMailer::Base
   def leave(applicant_name, url)
     @applicant_name = applicant_name
     @recorded_url = url
-    mail to: "reachme.vadivelan@gmail.com", subject: "#{applicant_name.capitalize} shared important message"
+    mail to: "vadivelan.kuppusamy@cognizant.com", subject: "#{applicant_name.capitalize} shared important message"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
