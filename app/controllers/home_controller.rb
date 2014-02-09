@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 						@filename = "#{Time.now.to_s.delete(" ")}#{params[:cid_e164]}"
 						@file_format = "wav"
 						@duration = 30
-				elsif params[:data] && params[:cid][4..-1]
+				elsif params[:data] && params[:cid]
 						applicant = User.find_applicant(params[:cid][4..-1])
 						Notifications.leave(applicant ? applicant.login : "Unknown User", params[:data]).deliver
 				end
