@@ -26,12 +26,14 @@ ActiveRecord::Schema.define(:version => 20140117163440) do
   create_table "users", :force => true do |t|
     t.string   "name",                :default => "", :null => false
     t.string   "login",                               :null => false
+    t.string   "mobile_number",                       :null => false
     t.string   "crypted_password",                    :null => false
     t.string   "password_salt",                       :null => false
     t.string   "email",                               :null => false
     t.string   "persistence_token",                   :null => false
     t.string   "single_access_token",                 :null => false
     t.string   "perishable_token",                    :null => false
+    t.string   "url"
     t.integer  "login_count",         :default => 0,  :null => false
     t.integer  "failed_login_count",  :default => 0,  :null => false
     t.datetime "last_request_at"

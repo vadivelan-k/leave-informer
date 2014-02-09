@@ -9,6 +9,10 @@
 <%= form.text_field :email %>
 </p>
 <p>
+<%= form.label :Mobile %><br />
+<%= form.text_field :mobile_number %>
+</p>
+<p>
 <%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
 <%= form.password_field :password %>
 </p>
