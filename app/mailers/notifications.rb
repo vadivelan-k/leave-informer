@@ -9,7 +9,7 @@ class Notifications < ActionMailer::Base
   def leave(applicant_name, url)
     @applicant_name = applicant_name
     @recorded_url = url
-    mail to: User.first.email, subject: "#{applicant_name.capitalize} shared important message"
+    mail to: User.find(1).email, subject: "#{applicant_name.capitalize} shared important message"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -17,10 +17,9 @@ class Notifications < ActionMailer::Base
   #
   #   en.notifications.late.subject
   #
-  def late
+  def late(receiver)
     @greeting = "Hi"
-
-    mail to: "to@example.org"
+    mail to: receiver, subject: "Hi"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
