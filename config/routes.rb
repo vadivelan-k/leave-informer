@@ -1,6 +1,9 @@
 CustomerEvaluation::Application.routes.draw do
   resources :user_sessions
-
+  
+  match 'generate_audio' => "speaks#generate_audio", :as => :generate_audio
+  match 'text_converter' => "speaks#text_converter", :as => :text_converter
+  
   match 'play_text' => "home#play_text", :as => :play_text
   match 'record_conversation' => "home#record_conversation", :as => :record_conversation
   

@@ -1,0 +1,17 @@
+<h1>Enter text to convert</h1>
+
+<%= form_tag('/generate_audio') do -%>		
+		Text: <br />
+		<%= text_area_tag 'content', nil, rows: 20, cols: 50 %>
+		<div>
+				<%= submit_tag "Convert" %>
+		</div>
+<% end -%>
+
+
+<br />
+<% if session[:file_name] %>
+		<%= link_to "Download audio file here", "/#{session[:file_name]}" %>
+<% end %>
+
+<% session[:file_name] = nil %>
