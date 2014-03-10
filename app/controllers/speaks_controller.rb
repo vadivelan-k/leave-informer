@@ -9,6 +9,7 @@ class SpeaksController < ApplicationController
 				text_content = ActionView::Base.full_sanitizer.sanitize(params[:content])
 				begin
 						if text_content.length > 0
+								text_content = text_content.gsub(/\r|\n/,"").strip()
 								file_name = file_name(text_content[0..20] + ".mp3")
 								session[:file_name] = file_name
 								text_content.to_file "en", file_name
