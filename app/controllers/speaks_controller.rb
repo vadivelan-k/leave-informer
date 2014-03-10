@@ -4,11 +4,14 @@ class SpeaksController < ApplicationController
 		end
 		
 		def generate_audio
+				#~ puts params.inspect
+				#~ puts params[:content].inspect
+				text_content = ActionView::Base.full_sanitizer.sanitize(params[:content])
 				begin
-						if params[:content].length > 0
-								file_name = file_name(params[:content][0..20] + ".mp3")
+						if text_content.length > 0
+								file_name = file_name(text_content[0..20] + ".mp3")
 								session[:file_name] = file_name
-								params[:content].to_file "en", file_name
+								text_content.to_file "en", file_name
 								flash[:status] = "success"
 						end
 				rescue
