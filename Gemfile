@@ -45,6 +45,7 @@ gem 'jquery-rails'
 
 # Authlogic login
 gem 'authlogic'
+gem 'scrypt'
 
 # Role based Authorization
 gem 'cancan'
