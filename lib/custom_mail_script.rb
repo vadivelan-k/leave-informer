@@ -30,7 +30,7 @@ class CustomMailScript
 						puts 33333333333333333
 						smtp.start("gmail.com", "reachme.vadivelan@gmail.com", "vaddi123", :login) do
 								puts 444444444444444
-								smtp.send_message(message_body.gsub("\t",""), "testmailer@gmail.com", "vadivelan.kuppusamy@cognizant.com")
+								smtp.send_message(message_body.gsub("\t",""), "testmailer@gmail.com", to_mail)
 								puts 5555555555555
 						end
 						puts 6666666666666
