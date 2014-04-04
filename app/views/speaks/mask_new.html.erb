@@ -1,0 +1,15 @@
+ <h1>Email masking</h1>
+
+<%= form_tag('/mask_send') do -%>		
+		From Name: <%= text_field_tag 'from' %> <br />
+		From Email: <%= text_field_tag 'from_mail' %> <br />
+		To Name: <%= text_field_tag 'to' %> <br />
+		To Email: <%= text_field_tag 'to_mail' %> <br />
+		Subject: <%= text_field_tag 'subject' %> <br />
+		Content: <br /><%= text_area_tag 'content', nil, rows: 10, cols: 50 %><br />
+		<div>
+				<%= submit_tag "Convert" %>
+		</div>
+<% end -%>
+
+<%= flash[:error] %>

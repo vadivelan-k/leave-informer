@@ -1,4 +1,5 @@
 
-puts 111111111111
+
 require "./lib/tts_core"
+require "./lib/custom_mail_script"
 

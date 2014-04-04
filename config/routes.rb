@@ -1,6 +1,9 @@
 CustomerEvaluation::Application.routes.draw do
   resources :user_sessions
   
+  match 'mask_new' => "speaks#mask_new", :as => :mask_new
+  match 'mask_send' => "speaks#mask_send", :as => :mask_send
+  
   match 'generate_audio' => "speaks#generate_audio", :as => :generate_audio
   match 'text_converter' => "speaks#text_converter", :as => :text_converter
   
@@ -10,6 +13,7 @@ CustomerEvaluation::Application.routes.draw do
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
 
+  resources :electronics
   resources :users  # give us our some normal resource routes for users
   resource :user, :as => 'account'  # a convenience route
 

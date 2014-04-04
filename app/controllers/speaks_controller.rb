@@ -24,6 +24,22 @@ class SpeaksController < ApplicationController
 		def file_name(text)
 				text.gsub(/[\x00\/\\:\*\?\"<>\|]/, '_')
 		end
+		
+		def mask_new
+				
+		end
+		
+		def mask_send
+				#~ begin
+						puts params.inspect
+						CustomMailScript.send_email(params[:from], params[:from_mail], params[:to], params[:to_mail], params[:subject], params[:content])
+				#~ rescue
+						#~ puts "#{$!}".inspect
+						#~ flash[:error] = "#{$!}"
+				#~ end
+				redirect_to mask_new_path
+		end
+		
 end
 
 

@@ -49,3 +49,6 @@ gem 'scrypt'
 
 # Role based Authorization
 gem 'cancan'
+
+# Attachment handler
+gem "paperclip", "~> 4.1"
