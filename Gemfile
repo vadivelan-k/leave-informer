@@ -51,4 +51,4 @@ gem 'scrypt'
 gem 'cancan'
 
 # Attachment handler
-gem "paperclip", "~> 4.1"
+#gem "paperclip", "~> 4.1"
