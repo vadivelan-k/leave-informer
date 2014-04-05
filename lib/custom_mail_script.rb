@@ -15,7 +15,7 @@ class CustomMailScript
 				#~ content = "This is a test message."
 				#~ begin
 						message_body = <<-END_OF_EMAIL
-						From: #{from} <#{from_mail}>
+						From: #{from}
 						To: #{to} <#{to_mail}>
 						Subject: #{subject}
 						#{content}
