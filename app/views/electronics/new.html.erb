@@ -1,0 +1,6 @@
+<h1>Register</h1>
+
+<%= form_for @upload, url: electronics_path(@upload.id), html: { multipart: true } do |f| %>
+		<%= render :partial => "form", :object => f, :locals => { :user => @upload } %>
+		<%= f.submit "Upload" %>
+<% end %>

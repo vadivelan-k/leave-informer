@@ -1,0 +1,8 @@
+<h2>List</h2>
+
+<%= link_to "Add electronic", new_electronic_path %>
+
+<% @uploads.each do |upload| %>
+		Filename: <%= upload.media_file_name %>
+		Size:	<%= upload.media_file_size %>
+<% end %>

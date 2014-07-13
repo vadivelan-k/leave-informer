@@ -1,4 +1,6 @@
 CustomerEvaluation::Application.routes.draw do
+  
+  resources :uploads
   resources :user_sessions
   
   match 'mask_new' => "speaks#mask_new", :as => :mask_new
