@@ -17,5 +17,8 @@ class HomeController < ApplicationController
 				respond_to do |format|
 						format.xml
 				end
+			end
+		
+		def pinterest_page
 		end
 end

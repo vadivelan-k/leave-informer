@@ -21,7 +21,7 @@ CustomerEvaluation::Application.routes.draw do
 
   match 'signup' => 'users#new', :as => :signup
 
-  root :to => 'user_sessions#new'
+  root :to => 'home#pinterest_page'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
